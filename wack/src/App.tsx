@@ -1,19 +1,60 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
- let name : string   = "Akshit"
+let name: string = "Akshit";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Game main screen</p>
-
-        <h1>{`Time: ${Date.now()}`}</h1>
-        <p>Hello {name}</p>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, recusandae suscipit. At voluptates molestias sint nulla perferendis, neque commodi adipisci officiis doloribus cupiditate nihil, vero ipsum dignissimos quia, rem labore!</h2>
-
-      </header>
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            Navbar of Mr {name}
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Link
+                </a>
+              </li>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
