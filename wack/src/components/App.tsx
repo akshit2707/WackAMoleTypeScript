@@ -92,7 +92,7 @@ class App extends Component {
 
   clearMoles(){
     for(let value in this.state){
-      if (!isNaN(value)){
+      if (!isNaN(Number(value))){
         this.setState({
           [value]: 'translate(0, 110%)'
         });
